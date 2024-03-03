@@ -1,0 +1,4 @@
+{
+    "arrowParens": "always",
+    "plugins": ["prettier-plugin-tailwindcss"]
+}
