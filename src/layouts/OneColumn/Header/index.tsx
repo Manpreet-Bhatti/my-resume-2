@@ -8,9 +8,9 @@ const Header: React.FC = () => {
 
   return (
     <header>
-      <div className="mb-auto">
-        <h1 className="text-lg font-semibold text-primary">{author}</h1>
-        <span className="font-medium">{blurb}</span>
+      <div className="mb-auto font-medium">
+        <h1 className="text-lg text-primary">{author}</h1>
+        <span className="text-sm">{blurb}</span>
       </div>
       <ul className="mb-auto flex list-none gap-[0.025in] p-0 text-xs">
         {socials?.map((social, index) => {
