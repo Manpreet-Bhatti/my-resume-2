@@ -1,11 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { useMemo } from "react";
 
-type SocialLink = {
-  url: string;
-  type: string;
-};
-
 type QueryResult = {
   site: {
     siteMetadata: {
@@ -14,7 +9,6 @@ type QueryResult = {
       blurb?: string;
       author?: string;
       description?: string;
-      socials?: SocialLink[];
     };
   };
 };

@@ -12,7 +12,7 @@ export function stripLink(link: string, type: string) {
     case "github":
       return link.replace("https://github.com/", "");
     case "linkedin":
-      return link.replace("https://www.linkedin.com/in/", "");
+      return link.replace("https://linkedin.com/in/", "");
     default:
       return link;
   }
