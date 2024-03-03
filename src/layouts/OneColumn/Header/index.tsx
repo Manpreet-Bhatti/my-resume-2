@@ -21,7 +21,7 @@ const Header: React.FC = () => {
                 to={social.url}
                 rel="noopener noreferrer"
                 target="_blank"
-                className="hover:bg-hover-page active:bg-active-page flex items-center rounded-lg p-2 font-medium text-alt-text transition-colors duration-200 focus:text-text active:text-primary"
+                className="hover:bg-hover-page active:bg-active-page focus:bg-hover-page flex items-center rounded-lg p-2 font-medium text-alt-text transition-colors duration-200 active:text-primary"
               >
                 {Icon && (
                   <Icon className="mr-[0.05in] text-primary transition-colors duration-200" />
