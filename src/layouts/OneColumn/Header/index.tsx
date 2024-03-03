@@ -1,7 +1,6 @@
 import * as React from "react";
 import useMetadata from "../../../utils/useMetadata";
 import { getMediaIcon, stripLink } from "../../../utils/useMedia";
-import { Link } from "gatsby";
 
 const Header: React.FC = () => {
   const { author, blurb, socials } = useMetadata();
@@ -17,8 +16,8 @@ const Header: React.FC = () => {
           const Icon = getMediaIcon(social.type);
           return (
             <li key={index} className="mr-[0.25in]">
-              <Link
-                to={social.url}
+              <a
+                href={social.url}
                 rel="noopener noreferrer"
                 target="_blank"
                 className="hover:bg-hover-page active:bg-active-page focus:bg-hover-page flex items-center rounded-lg p-2 font-medium text-alt-text transition-colors duration-200 active:text-primary"
@@ -27,7 +26,7 @@ const Header: React.FC = () => {
                   <Icon className="mr-[0.05in] text-primary transition-colors duration-200" />
                 )}
                 <span>{stripLink(social.url, social.type)}</span>
-              </Link>
+              </a>
             </li>
           );
         })}

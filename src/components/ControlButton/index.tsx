@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import { IconType } from "react-icons";
 
 type ControlButtonProps = {
@@ -17,15 +16,15 @@ const ControlButton: React.FC<ControlButtonProps> = ({
 }) => {
   if (link) {
     return (
-      <Link
+      <a
         {...props}
-        to={link}
+        href={link}
         target="_blank"
         rel="noopener noreferrer"
         className="hover:bg-hover-page active:bg-active-page focus:bg-hover-page mt-2 box-border block aspect-square cursor-pointer rounded-full border-none bg-page text-text transition-colors duration-200 hover:text-primary focus:text-primary"
       >
         <Icon {...props} className="flex h-auto w-5" />
-      </Link>
+      </a>
     );
   }
 
