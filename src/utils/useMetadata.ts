@@ -22,10 +22,6 @@ const query = graphql`
         blurb
         author
         description
-        socials {
-          url
-          type
-        }
       }
     }
   }
