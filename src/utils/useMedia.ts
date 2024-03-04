@@ -26,7 +26,7 @@ export function getMediaIcon(type: string) {
       return FiGithub;
     case "linkedin":
       return RiLinkedinLine;
-    case "react":
+    case "website":
       return FaReact;
     default:
       return null;
