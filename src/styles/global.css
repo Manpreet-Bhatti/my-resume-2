@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+  #gatsby-focus-wrapper {
+    grid-gap: 0;
+    padding: 0;
+  }
+}
+
+@page {
+  size: letter portrait;
+  margin: 0;
+}
+
+* {
+  font-family: "Avenir", sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+strong {
+  @apply transition-colors duration-200;
+}
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  min-height: 100%;
+}
+
+html {
+  @apply text-text;
+}
+
+body {
+  @apply bg-background transition-colors duration-200;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+#gatsby-focus-wrapper {
+  box-sizing: border-box;
+  justify-items: center;
+  width: fit-content;
+  grid-gap: 2rem;
+  margin: 0 auto;
+  display: grid;
+  padding: 2.5rem;
+}
