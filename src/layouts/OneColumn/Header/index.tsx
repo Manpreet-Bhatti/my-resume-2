@@ -19,7 +19,7 @@ const Header: React.FC = () => {
   return (
     <header>
       <div className="mb-auto font-medium">
-        <h1 className="text-lg text-primary">{author}</h1>
+        <h1 className="-mb-2 text-lg text-primary">{author}</h1>
         <span className="text-sm">{blurb}</span>
       </div>
       <ul className="mb-auto flex list-none gap-[0.025in] p-0 text-xs">
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
                 href={data.contentfulHeader[key]}
                 rel="noopener noreferrer"
                 target="_blank"
-                className="hover:bg-hover-page active:bg-active-page focus:bg-hover-page flex items-center rounded-lg p-2 font-medium text-alt-text transition-colors duration-200 active:text-primary"
+                className="flex items-center rounded-lg p-2 font-medium text-alt-text transition-colors duration-200 hover:bg-hover-page focus:bg-hover-page active:bg-active-page active:text-primary"
                 aria-label={`Link to ${key}`}
               >
                 {Icon && (

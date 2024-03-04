@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FiLink } from "react-icons/fi";
+import { FiLink, FiGithub } from "react-icons/fi";
 
 type ContentTemplateProps = {
   title: string;
@@ -8,6 +8,7 @@ type ContentTemplateProps = {
   body: React.ReactNode;
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   home?: string;
+  github?: string;
 };
 
 const ContentTemplate: React.FC<ContentTemplateProps> = ({
@@ -17,30 +18,46 @@ const ContentTemplate: React.FC<ContentTemplateProps> = ({
   body,
   level: Heading = "h3",
   home,
+  github,
 }) => {
+  console.log(aside);
   return (
     <div>
-      <Heading className="mb-[0.025in] mt-[0.15in] flex items-center gap-x-1 font-medium text-primary">
-        {title}
-        {home && (
-          <a
-            href={home}
-            target="_blank"
-            rel="noreferrer noopenner"
-            aria-label={title}
-            className="hover:bg-hover-page focus:bg-hover-page active:bg-active-page rounded-md p-2 transition-colors duration-200"
-          >
-            <FiLink className="h-3 w-3 text-primary" />
-          </a>
-        )}
+      <Heading className="mb-[0.025in] mt-[0.15in] flex items-center justify-between text-sm font-medium text-primary">
+        <div className="flex items-center gap-x-1">
+          {title}
+          {home && (
+            <a
+              href={home}
+              target="_blank"
+              rel="noreferrer noopenner"
+              aria-label={title}
+              className="rounded-md p-2 transition-colors duration-200 hover:bg-hover-page focus:bg-hover-page active:bg-active-page"
+            >
+              <FiLink className="h-3 w-3 text-primary" />
+            </a>
+          )}
+          {github && (
+            <a
+              href={home}
+              target="_blank"
+              rel="noreferrer noopenner"
+              aria-label={title}
+              className="rounded-md p-2 transition-colors duration-200 hover:bg-hover-page focus:bg-hover-page active:bg-active-page"
+            >
+              <FiGithub className="h-3 w-3 text-primary" />
+            </a>
+          )}
+        </div>
+        {!subtitle && aside && <p className="text-xs text-alt-text">{aside}</p>}
       </Heading>
       {subtitle && (
-        <div className="flex justify-between text-sm font-medium">
+        <div className="-mt-1.5 flex justify-between text-xs font-medium">
           <p>{subtitle}</p>
           {aside && <p className="text-alt-text">{aside}</p>}
         </div>
       )}
-      <div className="mt-[0.1in] text-sm leading-[1.5] text-alt-text">
+      <div className="mt-1.5 text-sm leading-[1.5] text-alt-text">
         {body}
       </div>
     </div>

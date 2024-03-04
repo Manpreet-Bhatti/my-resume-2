@@ -13,8 +13,8 @@ const SectionTemplate: React.FC<SectionTemplateProps> = ({
   ...props
 }) => {
   return (
-    <section className={`mt-[0.2775in] ${classNames}`}>
-      {title && <h2 className="mb-[0.037in] text-lg font-medium">{title}</h2>}
+    <section className={`mt-2 ${classNames}`}>
+      {title && <h2 className="-mb-4 text-lg font-medium">{title}</h2>}
       {children}
     </section>
   );
