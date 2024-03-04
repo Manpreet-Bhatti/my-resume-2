@@ -10,9 +10,7 @@ export default function useDateFormat(start: string, end: string): string {
 
     const formattedStart = `${startParts[0]} ${startParts[2]}`;
     const formattedEnd =
-      startParts[1] === endParts[1]
-        ? "Present"
-        : `${endParts[0]} ${endParts[2]}`;
+      start === end ? "Present" : `${endParts[0]} ${endParts[2]}`;
 
     return `${formattedStart} \u2013 ${formattedEnd}`;
   } catch (error) {
