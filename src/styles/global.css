@@ -39,11 +39,11 @@ body,
 }
 
 html {
-  @apply text-text;
+  @apply text-text dark:text-dark-text;
 }
 
 body {
-  @apply bg-background transition-colors duration-200;
+  @apply bg-background transition-colors duration-200 dark:bg-dark-background;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
