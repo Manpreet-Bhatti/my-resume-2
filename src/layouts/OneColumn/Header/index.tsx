@@ -1,6 +1,6 @@
 import * as React from "react";
 import useMetadata from "../../../utils/useMetadata";
-import { getMediaIcon, stripLink } from "../../../utils/useMedia";
+import { getMediaIcon, stripLink } from "../../../utils/useSocials";
 import { graphql, useStaticQuery } from "gatsby";
 
 const Header: React.FC = () => {
