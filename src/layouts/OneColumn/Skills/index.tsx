@@ -31,7 +31,10 @@ const Skills: React.FC = () => {
                 </h3>
                 <ul className="flex flex-wrap gap-[0.1in]">
                   {skills.list.map((item) => (
-                    <li className="text-xs text-alt-text" key={item}>
+                    <li
+                      className="text-xs text-alt-text dark:text-dark-alt-text"
+                      key={item}
+                    >
                       {item}
                     </li>
                   ))}

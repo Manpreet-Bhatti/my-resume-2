@@ -20,7 +20,6 @@ const ContentTemplate: React.FC<ContentTemplateProps> = ({
   home,
   github,
 }) => {
-  console.log(aside);
   return (
     <div>
       <Heading className="mb-[0.025in] mt-[0.15in] flex items-center justify-between text-sm font-medium text-primary">
@@ -39,7 +38,7 @@ const ContentTemplate: React.FC<ContentTemplateProps> = ({
           )}
           {github && (
             <a
-              href={home}
+              href={github}
               target="_blank"
               rel="noreferrer noopenner"
               aria-label={title}
@@ -49,15 +48,21 @@ const ContentTemplate: React.FC<ContentTemplateProps> = ({
             </a>
           )}
         </div>
-        {!subtitle && aside && <p className="text-xs text-alt-text">{aside}</p>}
+        {!subtitle && aside && (
+          <p className="text-xs text-alt-text dark:text-dark-alt-text">
+            {aside}
+          </p>
+        )}
       </Heading>
       {subtitle && (
         <div className="-mt-1.5 flex justify-between text-xs font-medium">
-          <p>{subtitle}</p>
-          {aside && <p className="text-alt-text">{aside}</p>}
+          <p className="dark:text-dark-text">{subtitle}</p>
+          {aside && (
+            <p className="text-alt-text dark:text-dark-alt-text">{aside}</p>
+          )}
         </div>
       )}
-      <div className="mt-1.5 text-sm leading-[1.5] text-alt-text">
+      <div className="mt-1.5 text-sm leading-[1.5] text-alt-text dark:text-dark-alt-text">
         {body}
       </div>
     </div>
