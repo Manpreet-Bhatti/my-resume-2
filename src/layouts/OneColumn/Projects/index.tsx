@@ -36,8 +36,6 @@ const Projects: React.FC = () => {
     }
   `);
 
-  console.log(data.contentfulListOfProjects);
-
   return (
     <SectionTemplate title="Projects">
       {data.contentfulListOfProjects.projects.map(
