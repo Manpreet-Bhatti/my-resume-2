@@ -5,7 +5,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions }) => {
   const { createPage } = actions;
   createPage({
     path: "/",
-    component: path.resolve(__dirname, "./src/layouts/OneColumn/index.tsx"),
+    component: path.resolve("./src/layouts/OneColumn/index.tsx"),
     context: { withButtons: true },
   });
 };
