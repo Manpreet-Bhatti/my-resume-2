@@ -11,7 +11,7 @@ type BaseProps = {
   children: React.ReactNode;
 };
 
-export default function Base({ withMenu, children }: BaseProps) {
+const Base: React.FC<BaseProps> = ({ withMenu, children }) => {
   return (
     <ThemeProvider>
       {children}
@@ -32,7 +32,9 @@ export default function Base({ withMenu, children }: BaseProps) {
       )}
     </ThemeProvider>
   );
-}
+};
+
+export default Base;
 
 export const Head: React.FC<HeadProps> = (props) => {
   const metadata = useMetadata();
