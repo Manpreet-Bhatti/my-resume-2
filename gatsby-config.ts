@@ -27,12 +27,14 @@ const config: GatsbyConfig = {
         name: "pages",
         path: "./src/pages",
       },
+      __key: "pages",
     },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
     "gatsby-plugin-typescript",
+    "gatsby-plugin-netlify",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
