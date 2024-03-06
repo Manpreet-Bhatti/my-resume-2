@@ -33,11 +33,6 @@ const config: Config = {
       },
     },
   },
-  variants: {
-    extends: {
-      borderRadius: ["print"],
-    },
-  },
   plugins: [],
 };
 
