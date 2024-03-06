@@ -3,6 +3,8 @@ import ControlButton from "../ControlButton";
 import { RiGithubLine, RiPrinterLine } from "react-icons/ri";
 import { ThemeProvider } from "./ThemeContext";
 import ChangeTheme from "./ChangeTheme";
+import { Helmet } from "react-helmet";
+import useMetadata from "../../utils/useMetadata";
 
 type BaseProps = {
   withMenu?: boolean;
@@ -31,3 +33,27 @@ export default function Base({ withMenu, children }: BaseProps) {
     </ThemeProvider>
   );
 }
+
+export const Head: React.FC = () => {
+  const metadata = useMetadata();
+
+  return (
+    <Helmet>
+      <html lang="en" />
+      <link
+        rel="icon"
+        as="image"
+        type="image/png"
+        href="/logo.svg"
+        sizes="16x16"
+      />
+      <title>{`${metadata.author} | ${metadata.title}`}</title>
+      <meta name="description" content={metadata.description} />
+      {/* <meta property="og:url" content={process.env.GATSBY_URL} /> */}
+      <meta name="og:title" content={metadata.title} />
+      <meta name="og:description" content={metadata.description} />
+      <meta name="twitter:title" content={metadata.title} />
+      <meta name="twitter:description" content={metadata.description} />
+    </Helmet>
+  );
+};
