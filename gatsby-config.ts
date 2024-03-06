@@ -33,7 +33,6 @@ const config: GatsbyConfig = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
     "gatsby-plugin-typescript",
-    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -43,7 +42,7 @@ const config: GatsbyConfig = {
         background_color: "#ffffff",
         theme_color: "#D40000",
         display: `minimal-ui`,
-        icon: `/static/logo.svg`,
+        icon: `static/logo.svg`,
       },
     },
   ],
