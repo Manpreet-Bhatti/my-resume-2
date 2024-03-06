@@ -14,7 +14,7 @@ I wanted to have a resume ready at-hand for when anyone was interested in me/my 
 
 ## Demo
 
-![A preview of how a sample resume would look like](./src/images/demo.png)
+![A preview of how a sample resume would look like](./static/demo.png)
 
 ## Stack
 
