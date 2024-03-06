@@ -9,7 +9,7 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 export { Head } from "../../components/Base";
 
-const IndexPage: React.FC<PageProps> = () => {
+const OneColumn: React.FC<PageProps> = (props) => {
   return (
     <Base withMenu>
       <Paper classNames="flex-col flex">
@@ -23,4 +23,4 @@ const IndexPage: React.FC<PageProps> = () => {
   );
 };
 
-export default IndexPage;
+export default OneColumn;

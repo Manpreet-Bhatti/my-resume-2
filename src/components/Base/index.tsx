@@ -4,6 +4,7 @@ import { RiGithubLine, RiPrinterLine } from "react-icons/ri";
 import { ThemeProvider } from "./ThemeContext";
 import ChangeTheme from "./ChangeTheme";
 import useMetadata from "../../utils/useMetadata";
+import type { HeadProps } from "gatsby";
 
 type BaseProps = {
   withMenu?: boolean;
@@ -33,7 +34,7 @@ export default function Base({ withMenu, children }: BaseProps) {
   );
 }
 
-export const Head: React.FC = () => {
+export const Head: React.FC<HeadProps> = (props) => {
   const metadata = useMetadata();
 
   return (
