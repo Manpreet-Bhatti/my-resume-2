@@ -31,7 +31,7 @@ const ContentTemplate: React.FC<ContentTemplateProps> = ({
               target="_blank"
               rel="noreferrer noopenner"
               aria-label={title}
-              className="rounded-md p-2 transition-colors duration-200 hover:bg-hover-page focus:bg-hover-page active:bg-active-page"
+              className="dark:hover:bg-dark-hover-page dark:active:bg-dark-active-page rounded-md p-2 transition-colors duration-200 hover:bg-hover-page active:bg-active-page"
             >
               <FiLink className="h-3 w-3 text-primary" />
             </a>
@@ -42,7 +42,7 @@ const ContentTemplate: React.FC<ContentTemplateProps> = ({
               target="_blank"
               rel="noreferrer noopenner"
               aria-label={title}
-              className="rounded-md p-2 transition-colors duration-200 hover:bg-hover-page focus:bg-hover-page active:bg-active-page"
+              className="dark:hover:bg-dark-hover-page dark:active:bg-dark-active-page rounded-md p-2 transition-colors duration-200 hover:bg-hover-page active:bg-active-page"
             >
               <FiGithub className="h-3 w-3 text-primary" />
             </a>

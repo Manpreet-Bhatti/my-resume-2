@@ -31,7 +31,7 @@ const Header: React.FC = () => {
                 href={data.contentfulHeader[key]}
                 rel="noopener noreferrer"
                 target="_blank"
-                className="flex items-center rounded-lg p-2 font-medium text-alt-text transition-colors duration-200 hover:bg-hover-page focus:bg-hover-page active:bg-active-page active:text-primary dark:text-dark-alt-text"
+                className="dark:hover:bg-dark-hover-page dark:active:bg-dark-active-page flex items-center rounded-lg p-2 font-medium text-alt-text transition-colors duration-200 hover:bg-hover-page active:bg-active-page dark:text-dark-alt-text"
                 aria-label={`Link to ${key}`}
               >
                 {Icon && (

@@ -65,7 +65,7 @@ const Work: React.FC = () => {
                         <a
                           aria-label={content.label}
                           rel="noreferrer noopenner"
-                          className="hover:bg-hover-page focus:bg-hover-page active:bg-active-page rounded-md p-2 transition-colors duration-200"
+                          className="dark:hover:bg-dark-hover-page dark:active:bg-dark-active-page rounded-md p-2 transition-colors duration-200 hover:bg-hover-page active:bg-active-page"
                           target="_blank"
                           href={content.link}
                         >
@@ -76,7 +76,7 @@ const Work: React.FC = () => {
                         <a
                           aria-label={content.label}
                           rel="noreferrer noopenner"
-                          className="hover:bg-hover-page focus:bg-hover-page active:bg-active-page rounded-md p-2 transition-colors duration-200"
+                          className="dark:hover:bg-dark-hover-page dark:active:bg-dark-active-page rounded-md p-2 transition-colors duration-200 hover:bg-hover-page active:bg-active-page"
                           target="_blank"
                           href={content.link}
                         >
