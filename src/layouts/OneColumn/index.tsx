@@ -7,6 +7,7 @@ import Work from "./Work";
 import Education from "./Education";
 import Projects from "./Projects";
 import Skills from "./Skills";
+export { Head } from "../../components/Base";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
