@@ -2,7 +2,7 @@
   "name": "my-resume-2",
   "version": "1.0.0",
   "private": true,
-  "description": "my-resume-2",
+  "description": "An HTML resume made with React and Gatsby for the fun of it... Learn more about this and things I make at https://github.com/Manpreet-Bhatti",
   "author": "Manpreet Bhatti",
   "keywords": [
     "gatsby"
