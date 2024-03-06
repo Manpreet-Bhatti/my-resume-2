@@ -22,7 +22,7 @@ const ContentTemplate: React.FC<ContentTemplateProps> = ({
 }) => {
   return (
     <div>
-      <Heading className="mb-[0.025in] mt-[0.15in] flex items-center justify-between text-sm font-medium text-primary">
+      <Heading className="mb-[0.025in] mt-[0.05in] flex items-center justify-between text-sm font-medium text-primary">
         <div className="flex items-center gap-x-1">
           {title}
           {home && (

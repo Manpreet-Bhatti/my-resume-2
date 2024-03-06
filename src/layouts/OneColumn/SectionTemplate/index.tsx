@@ -15,7 +15,7 @@ const SectionTemplate: React.FC<SectionTemplateProps> = ({
   return (
     <section className={`mt-2 ${classNames}`} {...props}>
       {title && (
-        <h2 className="-mb-4 text-lg font-medium dark:text-dark-text">
+        <h2 className="-mb-2 text-lg font-medium dark:text-dark-text">
           {title}
         </h2>
       )}
