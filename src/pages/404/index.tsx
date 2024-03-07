@@ -45,7 +45,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
 
 export default NotFoundPage;
 
-export const Head: HeadFC = () => {
+export const Head: HeadFC = (props) => {
   return (
     <>
       <style>{`
@@ -57,7 +57,7 @@ export const Head: HeadFC = () => {
               padding: 0;
             }
           `}</style>
-      <BaseHead />
+      <BaseHead {...props} />
     </>
   );
 };

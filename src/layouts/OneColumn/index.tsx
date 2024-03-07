@@ -11,7 +11,7 @@ export { Head } from "../../components/Base";
 
 const OneColumn: React.FC<PageProps> = (props) => {
   return (
-    <Base withMenu>
+    <Base {...props} withMenu>
       <Paper classNames="flex-col flex">
         <Header />
         <Skills />
