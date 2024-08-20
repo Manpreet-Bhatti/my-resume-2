@@ -8,7 +8,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: "my-resume",
     siteUrl: "https://res.manpreetbhatti.com/",
-    blurb: "Software Developer @ Agentnoon",
+    blurb: "Product Engineer @ Agentnoon",
     author: "Manpreet Bhatti",
     description,
   },
