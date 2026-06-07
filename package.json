@@ -1,40 +1,35 @@
 {
   "name": "my-resume-2",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "private": true,
-  "description": "An HTML resume made with React and Gatsby for the fun of it... Learn more about this and things I make at https://github.com/Manpreet-Bhatti",
+  "description": "An HTML resume made with React and Astro. Learn more about this and things I make at https://github.com/Manpreet-Bhatti",
   "author": "Manpreet Bhatti",
   "keywords": [
-    "gatsby"
+    "astro"
   ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby clean && gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
+    "develop": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.17",
-    "gatsby": "^5.13.2",
-    "gatsby-plugin-manifest": "^5.13.1",
-    "gatsby-plugin-netlify": "^5.1.1",
-    "gatsby-plugin-postcss": "^6.13.1",
-    "gatsby-plugin-typescript": "^5.13.1",
-    "postcss": "^8.4.35",
+    "@astrojs/react": "^5.0.7",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^5.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.11",
-    "ts-node": "^10.9.2",
+    "prettier-plugin-tailwindcss": "^0.7.4",
     "typescript": "^5.3.3"
   }
 }
