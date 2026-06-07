@@ -3,7 +3,7 @@ import ControlButton from "../ControlButton";
 import { RiGithubLine, RiPrinterLine } from "react-icons/ri";
 import { ThemeProvider } from "./ThemeContext";
 import ChangeTheme from "./ChangeTheme";
-import useMetadata from "../../utils/useMetadata";
+import { meta } from "../../data/meta";
 import type { HeadProps } from "gatsby";
 
 type BaseProps = {
@@ -36,9 +36,7 @@ const Base: React.FC<BaseProps> = ({ withMenu, children }) => {
 
 export default Base;
 
-export const Head: React.FC<HeadProps> = (props) => {
-  const metadata = useMetadata();
-
+export const Head: React.FC<HeadProps> = () => {
   return (
     <>
       <html lang="en" />
@@ -49,13 +47,13 @@ export const Head: React.FC<HeadProps> = (props) => {
         href="/logo.svg"
         sizes="16x16"
       />
-      <title>{`${metadata.author} | ${metadata.title}`}</title>
-      <meta name="description" content={metadata.description} />
-      <meta property="og:url" content={metadata.siteUrl} />
-      <meta name="og:title" content={metadata.title} />
-      <meta name="og:description" content={metadata.description} />
-      <meta name="twitter:title" content={metadata.title} />
-      <meta name="twitter:description" content={metadata.description} />
+      <title>{`${meta.author} | ${meta.title}`}</title>
+      <meta name="description" content={meta.description} />
+      <meta property="og:url" content={meta.siteUrl} />
+      <meta name="og:title" content={meta.title} />
+      <meta name="og:description" content={meta.description} />
+      <meta name="twitter:title" content={meta.title} />
+      <meta name="twitter:description" content={meta.description} />
     </>
   );
 };

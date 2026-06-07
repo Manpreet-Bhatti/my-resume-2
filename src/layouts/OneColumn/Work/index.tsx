@@ -1,50 +1,16 @@
 import * as React from "react";
 import SectionTemplate from "../SectionTemplate";
 import ContentTemplate from "../ContentTemplate";
-import { useStaticQuery, graphql } from "gatsby";
 import useDateFormat from "../../../utils/useDateFormat";
 import { FiGithub, FiLink } from "react-icons/fi";
-
-type DescriptionItem = {
-  content: string;
-  label?: string;
-  link?: string;
-  github?: string;
-};
-
-type Job = {
-  start: string;
-  end: string;
-  company: string;
-  home?: string;
-  position: string;
-  description: DescriptionItem[];
-};
+import { work, type DescriptionItem } from "../../../data/work";
 
 const Work: React.FC = () => {
   const format = useDateFormat;
-  const data = useStaticQuery(graphql`
-    query WorkQuery {
-      contentfulListOfWork {
-        work {
-          start(formatString: "MMM DD YYYY")
-          end(formatString: "MMM DD YYYY")
-          company
-          home
-          position
-          description {
-            content
-            label
-            link
-          }
-        }
-      }
-    }
-  `);
 
   return (
     <SectionTemplate title="Work">
-      {data.contentfulListOfWork.work.map((job: Job, key: number) => {
+      {work.map((job, key) => {
         return (
           <ContentTemplate
             key={key}
@@ -54,7 +20,7 @@ const Work: React.FC = () => {
             home={job.home}
             body={
               <ul className="grid grid-cols-[1fr] gap-[0.075in]">
-                {job.description.map((content, i) => {
+                {job.description.map((content: DescriptionItem, i: number) => {
                   return (
                     <li
                       key={i}
