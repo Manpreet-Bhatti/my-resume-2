@@ -1,0 +1,24 @@
+---
+import SectionTemplate from './SectionTemplate.astro';
+import ContentTemplate from './ContentTemplate.astro';
+import useDateFormat from '../utils/useDateFormat';
+import { projects } from '../data/projects';
+---
+<SectionTemplate title="Projects">
+  {
+    projects.map((project) => (
+      <ContentTemplate
+        title={project.name}
+        home={project.home}
+        github={project.github}
+        aside={useDateFormat(project.start, project.end)}
+      >
+        <ul class="grid grid-cols-[1fr] gap-[0.075in]">
+          {project.description.map((content) => (
+            <li class="inline-flex items-center gap-x-1 text-xs">{content.content}</li>
+          ))}
+        </ul>
+      </ContentTemplate>
+    ))
+  }
+</SectionTemplate>
