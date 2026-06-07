@@ -1,9 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: #EBEBEB;
+  --color-dark-background: #393939;
+  --color-page: #FFFFFF;
+  --color-hover-page: #F8F8F8;
+  --color-dark-hover-page: #2A2A2A;
+  --color-active-page: #F1F1F1;
+  --color-dark-active-page: #2F2F2F;
+  --color-dark-page: #252525;
+  --color-text: #333333;
+  --color-dark-text: #CCCCCC;
+  --color-alt-text: #737373;
+  --color-dark-alt-text: #8C8C8C;
+  --color-primary: #b83c63;
+  --color-primary-hover: #ab3459;
+  --color-primary-active: #9e2c50;
+  --color-primary-high: #fff0f3;
+  --color-primary-high-active: #ffdde6;
+  --color-dark-primary: #ffb7c5;
+  --color-dark-primary-hover: #2e1a22;
+  --color-dark-primary-high-active: #3d1e2a;
+}
 
 @media print {
-  #gatsby-focus-wrapper {
+  #content-wrapper {
     grid-gap: 0;
     padding: 0;
   }
@@ -15,26 +38,11 @@
 }
 
 * {
-  font-family: "Avenir", sans-serif;
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-strong {
-  @apply transition-colors duration-200;
+  font-family: "M PLUS 1p", sans-serif;
 }
 
 html,
-body,
-#___gatsby,
-#gatsby-focus-wrapper {
+body {
   min-height: 100%;
 }
 
@@ -43,16 +51,19 @@ html {
 }
 
 body {
-  @apply bg-background transition-colors duration-200 dark:bg-dark-background;
+  @apply bg-background dark:bg-dark-background;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
 
-#gatsby-focus-wrapper {
+#content-wrapper {
   box-sizing: border-box;
   justify-items: center;
   width: fit-content;
-  grid-gap: 2rem;
+  gap: 2rem;
   margin: 0 auto;
   display: grid;
   padding: 2.5rem;

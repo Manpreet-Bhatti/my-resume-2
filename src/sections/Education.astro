@@ -1,0 +1,23 @@
+---
+import SectionTemplate from './SectionTemplate.astro';
+import ContentTemplate from './ContentTemplate.astro';
+import { education } from '../data/education';
+---
+<SectionTemplate title="Education">
+  <ContentTemplate
+    title={education.school}
+    subtitle={education.degree}
+    aside={`${education.start} – ${education.end}`}
+  >
+    <div class="grid grid-cols-[max-content_auto] gap-x-[0.1in] gap-y-[0.15in] text-xs">
+      <h4 class="font-medium">Relevant Coursework</h4>
+      <ul class="flex flex-wrap gap-[0.1in]">
+        {education.coursework.map((course) => <li>{course}</li>)}
+      </ul>
+      <h4 class="font-medium">Leadership and Clubs</h4>
+      <ul class="flex flex-wrap gap-[0.1in]">
+        {education.organizations.map((org) => <li>{org}</li>)}
+      </ul>
+    </div>
+  </ContentTemplate>
+</SectionTemplate>

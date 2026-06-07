@@ -1,0 +1,49 @@
+---
+import { FiGithub, FiLink } from 'react-icons/fi';
+import SectionTemplate from './SectionTemplate.astro';
+import ContentTemplate from './ContentTemplate.astro';
+import useDateFormat from '../utils/useDateFormat';
+import { work } from '../data/work';
+---
+<SectionTemplate title="Work">
+  {
+    work.map((job) => (
+      <ContentTemplate
+        title={job.company}
+        subtitle={job.position}
+        aside={useDateFormat(job.start, job.end)}
+        home={job.home}
+      >
+        <ul class="grid grid-cols-[1fr] gap-[0.075in]">
+          {job.description.map((content) => (
+            <li class="inline-flex items-center gap-x-1 text-xs">
+              {content.content}
+              {content.github && content.label && (
+                <a
+                  aria-label={content.label}
+                  rel="noreferrer noopener"
+                  class="dark:hover:bg-dark-hover-page dark:active:bg-dark-active-page rounded-md p-2 transition-colors duration-200 hover:bg-hover-page active:bg-active-page"
+                  target="_blank"
+                  href={content.github}
+                >
+                  <FiGithub className="h-3 w-3 text-primary dark:text-dark-primary" />
+                </a>
+              )}
+              {content.link && (
+                <a
+                  aria-label={content.label}
+                  rel="noreferrer noopener"
+                  class="dark:hover:bg-dark-hover-page dark:active:bg-dark-active-page rounded-md p-2 transition-colors duration-200 hover:bg-hover-page active:bg-active-page"
+                  target="_blank"
+                  href={content.link}
+                >
+                  <FiLink className="h-3 w-3 text-primary dark:text-dark-primary" />
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </ContentTemplate>
+    ))
+  }
+</SectionTemplate>

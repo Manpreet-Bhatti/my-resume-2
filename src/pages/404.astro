@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { header } from '../data/header';
+---
+<BaseLayout>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+  </style>
+  <main class="flex h-screen flex-col items-center justify-center bg-dark-background">
+    <div class="grid grid-cols-[1fr] gap-[0.5rem]">
+      <h1 class="text-center text-[1.5rem] text-white">Uh oh 😬</h1>
+      <p class="text-[1.1rem] text-white">
+        The resume you're looking for was not found.
+        <br />
+        Interested in my work?{' '}
+        <a
+          href={header.email}
+          class="text-dark-primary underline transition-colors duration-200 ease-in-out"
+          target="_blank"
+        >
+          Let's get in touch
+        </a>!
+      </p>
+      <hr class="w-full text-white" />
+    </div>
+    <a
+      href="/"
+      class="mt-[0.5rem] w-fit rounded-[0.5rem] bg-dark-primary px-[1.5rem] py-[0.5rem] text-dark-background transition-colors duration-200 hover:bg-dark-primary/90 active:bg-dark-primary/80"
+    >
+      Go back Home
+    </a>
+  </main>
+</BaseLayout>

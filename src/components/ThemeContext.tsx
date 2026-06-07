@@ -1,7 +1,7 @@
 import React, {
   createContext,
   useContext,
-  ReactNode,
+  type ReactNode,
   useState,
   useEffect,
 } from "react";
@@ -14,15 +14,11 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  // Assuming `true` represents dark mode and `false` represents light mode
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   useEffect(() => {
-    // You may want to store the theme mode as a string in localStorage since it only supports strings
-    const storedTheme = localStorage.getItem("theme");
-    const isStoredThemeDark = storedTheme === "dark";
+    const isStoredThemeDark = localStorage.getItem("theme") === "dark";
     setIsDarkMode(isStoredThemeDark);
-    // Ensure the class is correctly applied to the document element
     document.documentElement.classList.toggle("dark", isStoredThemeDark);
   }, []);
 
@@ -30,7 +26,6 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const newTheme = !isDarkMode ? "dark" : "light";
     localStorage.setItem("theme", newTheme);
     setIsDarkMode(!isDarkMode);
-    // Ensure the class is correctly applied to the document element
     document.documentElement.classList.toggle("dark", !isDarkMode);
   };
 
