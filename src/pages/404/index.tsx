@@ -1,17 +1,9 @@
 import * as React from "react";
 import { Link, HeadFC, PageProps } from "gatsby";
-import { graphql, useStaticQuery } from "gatsby";
 import Base, { Head as BaseHead } from "../../components/Base";
+import { header } from "../../data/header";
 
 const NotFoundPage: React.FC<PageProps> = () => {
-  const data = useStaticQuery(graphql`
-    query EmailQuery {
-      contentfulHeader {
-        email
-      }
-    }
-  `);
-
   return (
     <Base>
       <main className="flex h-full flex-col items-center justify-center bg-dark-background">
@@ -22,7 +14,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
             <br />
             Interested in my work?{" "}
             <a
-              href={data.contentfulHeader.email}
+              href={header.email}
               className="text-primary underline transition-colors duration-200 ease-in-out hover:text-primary-hover active:text-primary-active"
               target="_blank"
             >
