@@ -51,7 +51,7 @@ export const Head: React.FC<HeadProps> = (props) => {
       />
       <title>{`${metadata.author} | ${metadata.title}`}</title>
       <meta name="description" content={metadata.description} />
-      <meta property="og:url" content={process.env.SITE_URL} />
+      <meta property="og:url" content={metadata.siteUrl} />
       <meta name="og:title" content={metadata.title} />
       <meta name="og:description" content={metadata.description} />
       <meta name="twitter:title" content={metadata.title} />

@@ -25,7 +25,7 @@ const Education: React.FC = () => {
         aside={`${data.contentfulEducation.start} \u2013 ${data.contentfulEducation.end}`}
         body={
           <div className="grid grid-cols-[max-content_auto] gap-x-[0.1in] gap-y-[0.15in] text-xs">
-            <h4 className="font-medium">Relavent Coursework</h4>
+            <h4 className="font-medium">Relevant Coursework</h4>
             <ul className="flex flex-wrap gap-[0.1in]">
               {data.contentfulEducation.coursework.map(
                 (course: string, i: number) => {
