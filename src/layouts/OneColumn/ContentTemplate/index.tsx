@@ -29,7 +29,7 @@ const ContentTemplate: React.FC<ContentTemplateProps> = ({
             <a
               href={home}
               target="_blank"
-              rel="noreferrer noopenner"
+              rel="noreferrer noopener"
               aria-label={title}
               className="dark:hover:bg-dark-hover-page dark:active:bg-dark-active-page rounded-md p-2 transition-colors duration-200 hover:bg-hover-page active:bg-active-page"
             >
@@ -40,7 +40,7 @@ const ContentTemplate: React.FC<ContentTemplateProps> = ({
             <a
               href={github}
               target="_blank"
-              rel="noreferrer noopenner"
+              rel="noreferrer noopener"
               aria-label={title}
               className="dark:hover:bg-dark-hover-page dark:active:bg-dark-active-page rounded-md p-2 transition-colors duration-200 hover:bg-hover-page active:bg-active-page"
             >

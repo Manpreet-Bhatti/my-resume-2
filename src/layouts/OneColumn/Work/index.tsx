@@ -64,7 +64,7 @@ const Work: React.FC = () => {
                       {content.github && content.label && (
                         <a
                           aria-label={content.label}
-                          rel="noreferrer noopenner"
+                          rel="noreferrer noopener"
                           className="dark:hover:bg-dark-hover-page dark:active:bg-dark-active-page rounded-md p-2 transition-colors duration-200 hover:bg-hover-page active:bg-active-page"
                           target="_blank"
                           href={content.link}
@@ -75,7 +75,7 @@ const Work: React.FC = () => {
                       {content.link && (
                         <a
                           aria-label={content.label}
-                          rel="noreferrer noopenner"
+                          rel="noreferrer noopener"
                           className="dark:hover:bg-dark-hover-page dark:active:bg-dark-active-page rounded-md p-2 transition-colors duration-200 hover:bg-hover-page active:bg-active-page"
                           target="_blank"
                           href={content.link}
