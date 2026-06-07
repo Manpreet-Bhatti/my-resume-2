@@ -1,5 +1,4 @@
-import { FiMail, FiGithub } from "react-icons/fi";
-import { FaReact } from "react-icons/fa";
+import { FiMail, FiGithub, FiGlobe } from "react-icons/fi";
 import { RiLinkedinLine } from "react-icons/ri";
 
 export function stripLink(link: string, type: string) {
@@ -27,7 +26,7 @@ export function getMediaIcon(type: string) {
     case "linkedin":
       return RiLinkedinLine;
     case "website":
-      return FaReact;
+      return FiGlobe;
     default:
       return null;
   }
