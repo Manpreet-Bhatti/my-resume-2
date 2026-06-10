@@ -6,7 +6,7 @@
 
 ### Purpose
 
-I wanted to have a resume ready at-hand for when anyone was interested in me/my work. Of course, I could provide them with a PDF of my resume but that's not something I carry around with me at all times; a solution for that was an online copy, accessible from both web/mobile, at all times. Think of it as a digital business card.
+A digital resume accessible from both web and mobile at all times — a shareable alternative to carrying a PDF.
 
 ### Features
 
@@ -22,11 +22,11 @@ I wanted to have a resume ready at-hand for when anyone was interested in me/my 
 
 ### Frontend
 
-- Gatsby, Tailwind CSS, TypeScript, React
+- Astro, Tailwind CSS, TypeScript, React
 
-### Content management
+### Content
 
-- Contentful
+- Local TypeScript data files (`src/data/`)
 
 ### Hosting
 
@@ -42,70 +42,61 @@ cd my-resume-2
 npm install
 ```
 
-### Gatsby config
+### Configuration
 
-> Note: since we're using Gatsby, you'll have to make some changes in `gatsby-config.ts`
+All resume content lives in `src/data/`:
 
-Make sure to change the `siteMetadata` which will be used to describe the base of your resume.
+| File | Content |
+|------|---------|
+| `header.ts` | Name, title, contact links |
+| `meta.ts` | Page metadata (title, description) |
+| `work.ts` | Work experience entries |
+| `education.ts` | Education entries |
+| `projects.ts` | Project entries |
+| `skills.ts` | Skills list |
 
-`package.json` also has some values that you'd be interested in changing such as `description` (which is used in the `siteMetadata`) and `author`.
+Edit these files to populate your own resume data.
 
-Once you've taken a look at those things, point your attention to the plugins, specifically `gatsby-source-contentful`. I used a CMS to retrieve my resume data. You can, however, use your own methods to do so. For example, using another CMS, keeping your data locally, or hosting your data in a database. **Note that no content will be shown if you decide to make no changes as it depends on the CMS I'm using**.
-
-Make sure to look through the [Gatsby plugins](https://www.gatsbyjs.com/plugins) offered to help you develop your resume to your needs.
+`package.json` holds `description` and `author` values you may also want to update.
 
 ## Running the Project
-
-To run the project locally, the following:
 
 ```bash
 npm run start
 ```
 
-> Take a look at `package.json` to view other scripts that you can run. Feel free to add your own scripts for actions such as linting
+> See `package.json` for all available scripts (`build`, `preview`, `typecheck`).
 
 ## Customization
 
-I decided to use Tailwind CSS to style my resume. Feel free to use other styling engines to make yours look unique to yourself. Gatsby has built-in CSS support but holds [numerous options](https://www.gatsbyjs.com/docs/how-to/styling/built-in-css/) for styling.
+### Tailwind CSS
 
-### Tailwind
-
-If you decided to stick to Tailwind CSS, make sure to change the values in `tailwind.config.ts`. This file holds all sorts of customizations to UI such as theme extensions and dark mode enabling. You can also place your custom fonts here, or, you can hold out for the `global.css`.
-
-### Global css
-
-Found in `/src/styles`, `global.css` is highly important for default styles you'd like to place and forget about. Things like `font-family`, the colour of your text, etc. More importantly, this file is responsible for tinkering with `#gatsby-focus-wrapper`, an under-the-hood HTML id, which allows for the resume to have a centered feel when viewing on the browser.
-
-Be careful about the styles you put here as they're globally applied, but be sure to use this file to your advantage too to make things smoother when developing.
+Styles use Tailwind CSS v4. Global defaults (fonts, base colors, etc.) live in `src/styles/global.css`.
 
 ### Icons
 
-I used [React Icons](https://react-icons.github.io/react-icons/) throughout the application. Again, feel free to use whatever icon library you prefer.
+[React Icons](https://react-icons.github.io/react-icons/) is used throughout. Swap in any other icon library as needed.
 
 ### Layout
 
-The way the resume is structured relies all on the OneColumn layout. Feel free to change things around here, moving sections around, rendering data in certain ways, etc.
+Sections are in `src/sections/` as `.astro` files. Rearrange or modify them in `src/pages/index.astro`. Interactive components (theme toggle, nav) are React components in `src/components/`.
 
 ## Deployment
 
-I intended on using Netlify as they've absorbed Gatsby Cloud. You can use any other hosting service (Vercel is a great one) to fulfil your needs.
-
 ### Netlify
 
-If you plan on sticking to Netlify, here's how you can deploy your resume.
+In "Site configuration" → "Build & deploy":
 
-Within the "Site configuration" section, you'll have to access the "Build & deploy" tab, where you'll add your repository (within "Continuous deployment") which Netlify will use to build and serve your resume. Be sure to view other options that you feel are needed, but you'll mostly need to configure things like "Build settings" and "Dependency management".
-
-It would also be a good idea to add any environment variables within "Environment variables" in "Build & deploy".
-
-Lastly, if you have a domain, you'll have to add that to the "Domain management" tab to see your resume on a URL that _isn't_ the generic Netlify one.
-
-Once you've done all those things, you'll be able to see the latest commit as your served resume.
+1. Connect your repository under "Continuous deployment"
+2. Build command: `npm run build`
+3. Publish directory: `dist`
+4. Add any environment variables under "Environment variables"
+5. Set a custom domain under "Domain management" if desired
 
 ## License
 
-Since this application is released under the MIT license, you're free to create a copy and make it your own with whatever changes you'd like.
+Released under the MIT license — fork and make it your own.
 
 ## Contact
 
-If you'd like to connect, feel free to find me via LinkedIn or email (found in the resume). I'd also be happy to answer any questions via email.
+Connect via LinkedIn or email (found in the resume).
