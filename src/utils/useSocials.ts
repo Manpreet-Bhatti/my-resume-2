@@ -12,6 +12,11 @@ export function stripLink(link: string, type: string) {
       return link.replace("https://github.com/", "");
     case "linkedin":
       return link.replace("https://linkedin.com/in/", "");
+    case "website":
+      return link.replace(
+        "https://my-site-2-theta.vercel.app",
+        "https://www.manpreetbhatti.com/",
+      );
     default:
       return link;
   }
