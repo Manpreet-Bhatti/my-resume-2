@@ -33,7 +33,7 @@ export const projects: Project[] = [
     name: "Graf-Gas",
     github: "https://github.com/Graf-Gas/graf-gas",
     start: "Oct 10 2021",
-    end: "Oct 10 2021",
+    end: "Jul 26 2024",
     description: [
       {
         content:

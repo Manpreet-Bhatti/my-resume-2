@@ -16,12 +16,16 @@ export type Job = {
 
 export const work: Job[] = [
   {
-    company: "Agentnoon",
-    home: "https://agentnoon.com/",
-    position: "Product Engineer",
+    company: "Dayforce",
+    home: "https://dayforce.com/",
+    position: "Software Developer, Strategic Workforce Planning",
     start: "Jan 03 2023",
     end: "Jan 03 2023",
     description: [
+      {
+        content:
+          "Implemented a feature to allow for users to merge workforce data from multiple sources, improving data accuracy and reducing manual reconciliation efforts.",
+      },
       {
         content:
           "Developed an operating model to streamline project management with task allocation, timeline projection, and cost analysis, boosting clients' project efficiency by an average of 30%.",
