@@ -1,16 +1,23 @@
 ---
-import SectionTemplate from './SectionTemplate.astro';
-import { skills } from '../data/skills';
+import SectionTemplate from "./SectionTemplate.astro";
+import { skills } from "../data/skills";
 ---
+
 <SectionTemplate title="Skills">
-  <div class="mt-4 grid grid-cols-[min-content_auto] gap-x-[0.1in] gap-y-[0.15in]">
+  <div
+    class="mt-4 grid grid-cols-[min-content_auto] gap-x-[0.1in] gap-y-[0.15in]"
+  >
     {
       skills.map((group) => (
         <>
-          <h3 class="text-sm font-medium text-primary dark:text-dark-primary">{group.title}</h3>
+          <h3 class="text-sm font-medium text-primary dark:text-dark-primary">
+            {group.title}
+          </h3>
           <ul class="flex flex-wrap gap-[0.1in]">
             {group.list.map((item) => (
-              <li class="text-xs text-alt-text dark:text-dark-alt-text">{item}</li>
+              <li class="text-xs text-alt-text dark:text-dark-alt-text">
+                {item}
+              </li>
             ))}
           </ul>
         </>

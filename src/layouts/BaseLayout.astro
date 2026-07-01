@@ -1,7 +1,7 @@
 ---
-import '../styles/global.css';
-import { meta } from '../data/meta';
-import NavMenu from '../components/NavMenu';
+import "../styles/global.css";
+import { meta } from "../data/meta";
+import NavMenu from "../components/NavMenu";
 
 interface Props {
   withMenu?: boolean;
@@ -9,6 +9,7 @@ interface Props {
 
 const { withMenu = false } = Astro.props;
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,7 +18,10 @@ const { withMenu = false } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>{meta.author} | {meta.title}</title>
     <meta name="description" content={meta.description} />
     <meta property="og:url" content={meta.siteUrl} />
@@ -26,8 +30,8 @@ const { withMenu = false } = Astro.props;
     <meta name="twitter:title" content={meta.title} />
     <meta name="twitter:description" content={meta.description} />
     <script is:inline>
-      if (localStorage.getItem('theme') === 'dark') {
-        document.documentElement.classList.add('dark');
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
       }
     </script>
   </head>

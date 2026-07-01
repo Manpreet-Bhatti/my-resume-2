@@ -1,10 +1,11 @@
 ---
-import { FiGithub, FiLink } from 'react-icons/fi';
-import SectionTemplate from './SectionTemplate.astro';
-import ContentTemplate from './ContentTemplate.astro';
-import useDateFormat from '../utils/useDateFormat';
-import { work } from '../data/work';
+import { FiGithub, FiLink } from "react-icons/fi";
+import SectionTemplate from "./SectionTemplate.astro";
+import ContentTemplate from "./ContentTemplate.astro";
+import useDateFormat from "../utils/useDateFormat";
+import { work } from "../data/work";
 ---
+
 <SectionTemplate title="Work">
   {
     work.map((job) => (

@@ -1,5 +1,5 @@
 ---
-import { FiLink, FiGithub } from 'react-icons/fi';
+import { FiLink, FiGithub } from "react-icons/fi";
 
 interface Props {
   title: string;
@@ -10,6 +10,7 @@ interface Props {
 }
 const { title, subtitle, aside, home, github } = Astro.props;
 ---
+
 <div>
   <h3
     class="mb-[0.025in] mt-[0.05in] flex items-center justify-between text-sm font-medium text-primary dark:text-dark-primary"
@@ -43,7 +44,11 @@ const { title, subtitle, aside, home, github } = Astro.props;
         )
       }
     </div>
-    {!subtitle && aside && <p class="text-xs text-alt-text dark:text-dark-alt-text">{aside}</p>}
+    {
+      !subtitle && aside && (
+        <p class="text-xs text-alt-text dark:text-dark-alt-text">{aside}</p>
+      )
+    }
   </h3>
   {
     subtitle && (
@@ -53,7 +58,9 @@ const { title, subtitle, aside, home, github } = Astro.props;
       </div>
     )
   }
-  <div class="mt-1.5 text-sm leading-[1.5] text-alt-text dark:text-dark-alt-text">
+  <div
+    class="mt-1.5 text-sm leading-normal text-alt-text dark:text-dark-alt-text"
+  >
     <slot />
   </div>
 </div>

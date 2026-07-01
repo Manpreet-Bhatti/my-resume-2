@@ -1,9 +1,10 @@
 ---
-import SectionTemplate from './SectionTemplate.astro';
-import ContentTemplate from './ContentTemplate.astro';
-import useDateFormat from '../utils/useDateFormat';
-import { projects } from '../data/projects';
+import SectionTemplate from "./SectionTemplate.astro";
+import ContentTemplate from "./ContentTemplate.astro";
+import useDateFormat from "../utils/useDateFormat";
+import { projects } from "../data/projects";
 ---
+
 <SectionTemplate title="Projects">
   {
     projects.map((project) => (
@@ -15,7 +16,9 @@ import { projects } from '../data/projects';
       >
         <ul class="grid grid-cols-[1fr] gap-[0.075in]">
           {project.description.map((content) => (
-            <li class="inline-flex items-center gap-x-1 text-xs">{content.content}</li>
+            <li class="inline-flex items-center gap-x-1 text-xs">
+              {content.content}
+            </li>
           ))}
         </ul>
       </ContentTemplate>

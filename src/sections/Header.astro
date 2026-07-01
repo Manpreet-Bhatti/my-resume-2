@@ -1,17 +1,21 @@
 ---
-import { FiMail, FiGithub, FiGlobe } from 'react-icons/fi';
-import { RiLinkedinLine } from 'react-icons/ri';
-import { stripLink } from '../utils/useSocials';
-import { header } from '../data/header';
-import { meta } from '../data/meta';
+import { FiMail, FiGithub, FiGlobe } from "react-icons/fi";
+import { RiLinkedinLine } from "react-icons/ri";
+import { stripLink } from "../utils/useSocials";
+import { header } from "../data/header";
+import { meta } from "../data/meta";
 
 const linkClass =
-  'dark:hover:bg-dark-hover-page dark:active:bg-dark-active-page flex items-center gap-1 rounded-lg p-2 font-medium text-alt-text transition-colors duration-200 hover:bg-hover-page active:bg-active-page dark:text-dark-alt-text';
-const iconClass = 'text-primary dark:text-dark-primary transition-colors duration-200';
+  "dark:hover:bg-dark-hover-page dark:active:bg-dark-active-page flex items-center gap-1 rounded-lg p-2 font-medium text-alt-text transition-colors duration-200 hover:bg-hover-page active:bg-active-page dark:text-dark-alt-text";
+const iconClass =
+  "text-primary dark:text-dark-primary transition-colors duration-200";
 ---
+
 <header>
   <div class="mb-auto font-medium">
-    <h1 class="-mb-2 text-lg text-primary dark:text-dark-primary">{meta.author}</h1>
+    <h1 class="-mb-2 text-lg text-primary dark:text-dark-primary">
+      {meta.author}
+    </h1>
     <span class="text-sm dark:text-dark-text">{meta.blurb}</span>
   </div>
   <ul class="mb-auto flex list-none gap-[0.025in] p-0 text-xs">
@@ -24,7 +28,7 @@ const iconClass = 'text-primary dark:text-dark-primary transition-colors duratio
         aria-label="Link to email"
       >
         <FiMail className={iconClass} />
-        <span>{stripLink(header.email, 'email')}</span>
+        <span>{stripLink(header.email, "email")}</span>
       </a>
     </li>
     <li class="mr-6">
@@ -36,7 +40,7 @@ const iconClass = 'text-primary dark:text-dark-primary transition-colors duratio
         aria-label="Link to github"
       >
         <FiGithub className={iconClass} />
-        <span>{stripLink(header.github, 'github')}</span>
+        <span>{stripLink(header.github, "github")}</span>
       </a>
     </li>
     <li class="mr-6">
@@ -48,7 +52,7 @@ const iconClass = 'text-primary dark:text-dark-primary transition-colors duratio
         aria-label="Link to linkedin"
       >
         <RiLinkedinLine className={iconClass} />
-        <span>{stripLink(header.linkedin, 'linkedin')}</span>
+        <span>{stripLink(header.linkedin, "linkedin")}</span>
       </a>
     </li>
     <li class="mr-6">
@@ -60,7 +64,7 @@ const iconClass = 'text-primary dark:text-dark-primary transition-colors duratio
         aria-label="Link to website"
       >
         <FiGlobe className={iconClass} />
-        <span>{stripLink(header.website, 'website')}</span>
+        <span>{stripLink(header.website, "website")}</span>
       </a>
     </li>
   </ul>

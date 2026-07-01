@@ -3,9 +3,14 @@ interface Props {
   title: string;
   class?: string;
 }
-const { title, class: className = '' } = Astro.props;
+const { title, class: className = "" } = Astro.props;
 ---
+
 <section class={`mt-2 ${className}`}>
-  {title && <h2 class="-mb-2 text-lg font-medium dark:text-dark-text">{title}</h2>}
+  {
+    title && (
+      <h2 class="-mb-2 text-lg font-medium dark:text-dark-text">{title}</h2>
+    )
+  }
   <slot />
 </section>

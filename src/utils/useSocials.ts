@@ -15,7 +15,7 @@ export function stripLink(link: string, type: string) {
     case "website":
       return link.replace(
         "https://my-site-2-theta.vercel.app",
-        "https://www.manpreetbhatti.com/",
+        "www.manpreetbhatti.com",
       );
     default:
       return link;
